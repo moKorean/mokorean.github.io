@@ -1,0 +1,142 @@
+<!-- 
+	CSCI 1170 Winter 23 - Assignment 2
+	@author: Geunwon Mo (B00954162)
+	@description: 'life.html' shows about hobbies. tried using audio/video and image tags
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="resource/images/favicon.ico">
+		<link rel="stylesheet" href="resource/css/common.css">
+		<title>Geunwon MO</title>
+	</head>
+	<body>
+		<div id="gridContainer">
+			<header class="lightColorSchemeLife">
+				<!-- Top right shortcuts : external links -->
+				<div class="topShortcuts">
+					<!-- [1] Poorna Chandra Ghanta. N.D. Social media Icons bundle Facebook Instagram Snapchat LinkedIn and other logo buttons. from https://www.vecteezy.com/vector-art/2661796-social-media-icons-bundle-facebook-instagram-snapchat-linkedin-and-other-logo-buttons -->
+					<a href="https://www.linkedin.com/in/mokorean/" target="_blank">
+						<img src="resource/images/icon_linkedin.png" alt="Icon of linkedIn shortcut">
+					</a>
+					<a href="https://www.instagram.com/mokorean" target="_blank">
+						<img src="resource/images/icon_insta.png" alt="Icon of instagram shortcut">
+					</a>
+					<a href="https://www.facebook.com/mokorean" target="_blank">
+						<img src="resource/images/icon_fb.png" alt="Icon of facebook shortcut">
+					</a>
+				</div>
+				<div class="headNameArea">
+					<h1>Geunwon Mo</h1>
+					<p>Financial platform back-end software engineer</p>
+				</div>
+			</header>
+			<nav class="colorSchemeLife">
+				<!-- Navigation bar -->
+				<div class="fL nobr">
+					<a href="index.html">About</a>
+					<span>|</span>
+					<a href="work.html">Work</a>
+					<span>|</span>
+					<a href="life.html" class="selected">Life</a>
+				</div>
+				<div class="fR" id="searchForm">
+					<form method="get" action="/notyet">
+						<label for="searchText">Search:</label>
+						<input type="text" placeholder="Text to search" id="searchText" name="searchText" maxlength="50" required>
+						<input type="submit" id="searchBtn" value="GO!">
+					</form>
+				</div>
+			</nav>
+			<main>
+				<!-- [Start] main area-->
+				<div id="galleryGridContainer">
+					<div id="profileArea">
+						<!-- Profile image circle -->
+						<img src="resource/images/profile_circle.png" alt="Profile picture circle" id="profileImage">
+					
+						<p><B>Hobbies</B></p>
+						<p>I enjoy a diverse range of interests, including travelingm driving and road trips, keeping up with the latest technology, and taking camping trips during my free time</p>
+
+						<!-- [2] FreeGroove. 2022. Seduction Jazz. from https://pixabay.com/music/search/genre/smooth%20jazz/ -->
+						<audio controls>
+						<source src="resource/contents/audios/seduction_jazz.mp3" type="audio/mpeg">
+						Your browser does not support the audio tag.
+						</audio>
+					</div>
+					<!-- All pictures and videos from my instagram. -->
+					<div id="galleryArea">
+						<div class="galleryItem">
+							<video controls class="galleryItem">
+								<source src="resource/contents/videos/parking.mp4">
+							</video>
+						</div>
+						<div class="galleryItem">
+							<video controls class="galleryItem">
+								<source src="resource/contents/videos/cancun.mp4">
+							</video>
+						</div>
+						<div class="galleryItem">
+							<video controls class="galleryItem">
+								<source src="resource/contents/videos/bmw.mp4">
+							</video>
+						</div>
+						<div>
+							<a href="resource/contents/pics/1.jpg" target="_blank">
+								<img src="resource/contents/thumbs/1.jpg" alt="Picture 1" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/2.jpg" target="_blank">
+								<img src="resource/contents/thumbs/2.jpg" alt="Picture 2" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/3.jpg" target="_blank">
+								<img src="resource/contents/thumbs/3.jpg" alt="Picture 3" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/4.jpg" target="_blank">
+								<img src="resource/contents/thumbs/4.jpg" alt="Picture 4" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/5.jpg" target="_blank">
+								<img src="resource/contents/thumbs/5.jpg" alt="Picture 5" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/6.jpg" target="_blank">
+								<img src="resource/contents/thumbs/6.jpg" alt="Picture 6" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/7.jpg" target="_blank">
+								<img src="resource/contents/thumbs/7.jpg" alt="Picture 7" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/8.jpg" target="_blank">
+								<img src="resource/contents/thumbs/8.jpg" alt="Picture 8" class="galleryItem">
+							</a>
+						</div>
+						<div>
+							<a href="resource/contents/pics/9.jpg" target="_blank">
+								<img src="resource/contents/thumbs/9.jpg" alt="Picture 9" class="galleryItem">
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- [End] main area-->
+			</main>
+			<footer>
+				<address>
+					6299 South St, Halifax, NS, Canada. <a href="mailto:mmo@dal.ca">mmo@dal.ca</a>
+				</address>
+				© 2023 Geunwon Mo
+			</footer>
+		</div>
+	</body>	
+</html>

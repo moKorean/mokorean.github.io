@@ -1,0 +1,149 @@
+<!-- 
+	CSCI 1170 Winter 23 - Assignment 2
+	@author: Geunwon Mo (B00954162)
+	@description: 'work.html' shows work and education history.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="resource/images/favicon.ico">
+		<link rel="stylesheet" href="resource/css/common.css">
+		<title>Geunwon MO</title>
+	</head>
+	<body>
+		<div id="gridContainer">
+			<header class="lightColorSchemeWork">
+				<!-- Top right shortcuts : external links -->
+				<div class="topShortcuts">
+					<!-- [1] Poorna Chandra Ghanta. N.D. Social media Icons bundle Facebook Instagram Snapchat LinkedIn and other logo buttons. from https://www.vecteezy.com/vector-art/2661796-social-media-icons-bundle-facebook-instagram-snapchat-linkedin-and-other-logo-buttons -->
+					<a href="https://www.linkedin.com/in/mokorean/" target="_blank">
+						<img src="resource/images/icon_linkedin.png" alt="Icon of linkedIn shortcut">
+					</a>
+					<a href="https://www.instagram.com/mokorean" target="_blank">
+						<img src="resource/images/icon_insta.png" alt="Icon of instagram shortcut">
+					</a>
+					<a href="https://www.facebook.com/mokorean" target="_blank">
+						<img src="resource/images/icon_fb.png" alt="Icon of facebook shortcut">
+					</a>
+				</div>
+				<div class="headNameArea">
+					<h1>Geunwon Mo</h1>
+					<p>Financial platform back-end software engineer</p>
+				</div>
+			</header>
+			<nav class="colorSchemeWork">
+				<!-- Navigation bar -->
+				<div class="fL nobr">
+					<a href="index.html">About</a>
+					<span>|</span>
+					<a href="work.html" class="selected">Work</a>
+					<span>|</span>
+					<a href="life.html">Life</a>
+				</div>
+				<div class="fR" id="searchForm">
+					<form method="get" action="/notyet">
+						<label for="searchText">Search:</label>
+						<input type="text" placeholder="Text to search" id="searchText" name="searchText" maxlength="50" required>
+						<input type="submit" id="searchBtn" value="GO!">
+					</form>
+				</div>
+			</nav>
+			<main>
+				<!-- [Start] main area-->
+				<table id="personalHistoryTable" class="center">
+					<tr class="trOddColor">
+						<th>WORK / EDUCATION</th>
+						<th>DATE</th>
+						<th>ROLE</th>
+						<th>DESCRIPTION</th>
+					</tr>
+					<tr class="trColor">
+						<td>Dalhousie University</td>
+						<td>2023.01 - Present</td>
+						<td>Bachelor</td>
+						<td class="left">
+							<ul>
+								<li>Faculty of Computer Science</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="trOddColor">
+						<td rowspan="2">Kakao bank</td>
+						<td>2016.04 - 2021.9<br>5 years 6 months</td>
+						<td>Team Lead - Senior Software engineer</td>
+						<td class="left">
+							<ul>
+								<li>Backend Software Engineer - APIs for Mobile App, Database synchronize application for mysql</li>
+								<li>Java, Kotlin(for server), Spring-boot, JPA, MySQL</li>
+								<li>Development experience in designing architecture and making online bank systems from scratch. (from 04/2016)</li>
+								<li>Now, Kakaobank is the leading online bank in Korea. (Over 12million users, over 18.3 trillion won in loan, 22.3 trillion won in deposit, 08/2020) (Experience in developing and maintaining web applications to withstand massive traffic)</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="trOddColor">
+						<td colspan="3" class="center">
+							<!-- [6] Dailymotion support. N.D. How to preserve the player aspect ratio on a responsive page. Retrieved from https://faq.dailymotion.com/hc/en-us/articles/360022841393-How-to-preserve-the-player-aspect-ratio-on-a-responsive-page#:~:text=In%20the%20HTML%2C%20put%20the,56.25%25%20%3D%2016%3A9 -->
+							<div id="iframeWrapper">
+								<!-- [3] Ministry of Employment and Labor in Korea. 2019. I asked Kakao Bank employees! "What does work-life balance mean to you?" (17 June 2019). from https://www.youtube.com/watch?v=iwisWKgjUcs -->
+								<iframe id="youtubeIframe" src="https://www.youtube.com/embed/iwisWKgjUcs?start=23" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>
+						</td>
+					</tr>
+					<tr class="trColor">
+						<td>Hana TI</td>
+						<td>2012.04 - 2016.04<br>4 years 1 months</td>
+						<td>Senior Web Programmer</td>
+						<td class="left">
+							<ul>
+								<li>APIs Development for Smartphone Banking application (Both of Frontend, Backend), Online Banking service development.</li>
+								<li>Building The First Smartphone banking service in Korea (IOS, Android)
+(Java2EE, JSP, Struts2, Spring3, Tiles, jQuery, iOS, Android)</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="trOddColor">
+						<td>Hanabank</td>
+						<td>2008.04 - 2012.03<br>4 years</td>
+						<td>Web Programmer</td>
+						<td class="left">
+							<ul>
+								<li>Internet Banking Service develop at HanaBank Next Generation proj.</li>
+								<li>After Project, maintenance Internet Banking Service and development mobile banking service.</li>
+								<li>Java2EE, JSP, Weblogic, Struts2, Spring3, Prototype, extJS, Tiles</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="trColor">
+						<td>Wiz21</td>
+						<td>2001.01 - 2002.05<br>1 years 5 months</td>
+						<td>Junior Software Developer</td>
+						<td class="left">
+							<ul>
+								<li>Web Application development at Start-up</li>
+								<li>ASP, JS, HTML, PHP, MS-SQL, IBM DB2, JSP, Web-Design work with Photoshop)</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="trOddColor">
+						<td>Dongyang Mirae University</td>
+						<td>2003 - 2009</td>
+						<td>Bachelor of Engineering</td>
+						<td class="left">
+							<ul>
+								<li>Information and Communication Engineering Bachelor of Engineering</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<!-- [End] main area-->
+			</main>
+			<footer>
+				<address>
+					6299 South St, Halifax, NS, Canada. <a href="mailto:mmo@dal.ca">mmo@dal.ca</a>
+				</address>
+				© 2023 Geunwon Mo
+			</footer>
+		</div>
+	</body>	
+</html>
