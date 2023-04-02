@@ -15,20 +15,24 @@ function changeColor(colour, clickedElement){
 
   const headerName = document.getElementById('headerNameArea');
   const headerNav = document.getElementById('headerNavArea');
+  const footer = document.querySelector('footer');
   
   //defines new color
   let lightColorScheme = "lightColorScheme" + clickedElement.getAttribute('kind') + colour;
   let colorScheme = "colorScheme" + clickedElement.getAttribute('kind') + colour;
 
+  //selector's selection mark move
   document.querySelectorAll('[id^="colour"]').forEach(existColorSelectors => { existColorSelectors.classList.remove('selected'); });
   clickedElement.classList.add('selected');
 
   //change color
   headerName.classList.remove(headerName.classList.value);
   headerNav.classList.remove(headerNav.classList.value);
+  footer.classList.remove(footer.classList.value);
 
   headerName.classList.add(lightColorScheme);
   headerNav.classList.add(colorScheme);
+  footer.classList.add(colorScheme);
   
   //for index page's color lines
   document.querySelectorAll('.articleArea > article > table tr:first-child > td:first-child').forEach(
@@ -38,3 +42,16 @@ function changeColor(colour, clickedElement){
   );
 
 }
+
+//for splash image, reduce body window when just index.html
+document.querySelectorAll('.indexMain').forEach( el => {
+  //if indexMain class detected, it is index.html
+  console.log('index html!');
+  el.style.height = el.style.height - 200;
+  var body = document.body,
+    html = document.documentElement;
+
+  var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+});
