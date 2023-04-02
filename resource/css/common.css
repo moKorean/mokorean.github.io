@@ -4,10 +4,9 @@
 #gridContainer{
 	display:grid;
 	grid-template-columns: minmax(480px, auto);	/* shrink min to 500px, width is autosizing*/
-	grid-template-rows: 130px 50px auto 100px;
+	grid-template-rows: 180px auto 100px;
 	grid-template-areas: 
 		"header"
-		"nav"
 		"main"
 		"footer";
 }
@@ -19,22 +18,28 @@
 
 /* color scheme */
 .colorSchemeIndex { background-color: #0085FF; }
-.lightColorSchemeIndex { background-color: #0085FF4d; }
+.lightColorSchemeIndex { background-color: rgb(178, 218, 255); }
 .colorSchemeLife { background-color: #FF007A; }
-.lightColorSchemeLife { background-color: #ff007A4d; }
+.lightColorSchemeLife { background-color: rgb(255, 178, 215); }
 .colorSchemeWork { background-color: #FFB800; }
-.lightColorSchemeWork { background-color: #FFB8004d; }
+.lightColorSchemeWork { background-color:  rgb(255, 234, 178); }
 
-header{
-	grid-area: header;
+#topHeaderMenus{
+    grid-area: header;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    width:100%;
 }
-header h1 {
+
+#headerNameArea h1 {
     font-size:50px;
     font-weight: 300;
     margin:0 0 0 0;
     padding-top:20px;
 }
-header p {
+#headerNameArea p {
     font-size:12px;
     margin: 0 0 20px 0;
 }
@@ -59,27 +64,29 @@ header p {
     padding:0 0 5px 50px;
 }
 
-nav {
-	grid-area: nav;
+#headerNavArea{
+    width: 100%;
+    height: 50px;
 }
-nav div{
+
+#headerNavArea div{
     color:white;
     font-size:20px;
     font-weight: 600;
     padding: 10px 50px;
 }
-nav span{
+#headerNavArea span{
     padding:0 50px;
 }
-nav a{
+#headerNavArea a{
     text-decoration: none;
     color: white;
 }
-nav a:hover{
+#headerNavArea a:hover{
     text-decoration: underline;
     color: white;
 }
-nav a.selected{
+#headerNavArea a.selected{
     text-decoration: underline;
     color: black;
     font-weight: bolder;
@@ -151,7 +158,7 @@ footer {
 .profileImgArea{
     position:relative;
     top:-110px;
-    z-index:100;
+    z-index:2;
     padding-left: 30px;
 }
 .profileImgArea > img {
