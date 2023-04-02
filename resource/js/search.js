@@ -42,7 +42,18 @@ function searchInPage() {
     if (cnt == 0) alert(`Not found : ${searchText.value.trim()}`);   //if not found, notification
     else{
         // alert(`Found ${cnt} '${searchText.value.trim()}'(s)`);
-        document.querySelector('.highlight').scrollIntoView();  //scroll to first searched one
+
+        //[9]Søren D. Ptæus. 2018. JavaScript scrollIntoView smooth scroll and offset. Stack Overflow. Retrieved April 2, 2023 from https://stackoverflow.com/a/49860927
+        let element = document.querySelector('.highlight');
+        let headerOffset = 180; //offset to Top Margin
+        let elementPosition = element.getBoundingClientRect().top;
+        let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        }); //scroll to first searched one
+
     }
 }
 

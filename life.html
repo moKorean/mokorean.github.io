@@ -13,40 +13,42 @@
 	</head>
 	<body>
 		<div id="gridContainer">
-			<header class="lightColorSchemeLife">
-				<!-- Top right shortcuts : external links -->
-				<div class="topShortcuts">
-					<!-- [1] Poorna Chandra Ghanta. N.D. Social media Icons bundle Facebook Instagram Snapchat LinkedIn and other logo buttons. from https://www.vecteezy.com/vector-art/2661796-social-media-icons-bundle-facebook-instagram-snapchat-linkedin-and-other-logo-buttons -->
-					<a href="https://www.linkedin.com/in/mokorean/" target="_blank">
-						<img src="resource/images/icon_linkedin.png" alt="Icon of linkedIn shortcut">
-					</a>
-					<a href="https://www.instagram.com/mokorean" target="_blank">
-						<img src="resource/images/icon_insta.png" alt="Icon of instagram shortcut">
-					</a>
-					<a href="https://www.facebook.com/mokorean" target="_blank">
-						<img src="resource/images/icon_fb.png" alt="Icon of facebook shortcut">
-					</a>
+			<div id="topHeaderMenus">
+				<div id="headerNameArea" class="lightColorSchemeLife">
+					<!-- Top right shortcuts : external links -->
+					<div class="topShortcuts">
+						<!-- [1] Poorna Chandra Ghanta. N.D. Social media Icons bundle Facebook Instagram Snapchat LinkedIn and other logo buttons. from https://www.vecteezy.com/vector-art/2661796-social-media-icons-bundle-facebook-instagram-snapchat-linkedin-and-other-logo-buttons -->
+						<a href="https://www.linkedin.com/in/mokorean/" target="_blank">
+							<img src="resource/images/icon_linkedin.png" alt="Icon of linkedIn shortcut">
+						</a>
+						<a href="https://www.instagram.com/mokorean" target="_blank">
+							<img src="resource/images/icon_insta.png" alt="Icon of instagram shortcut">
+						</a>
+						<a href="https://www.facebook.com/mokorean" target="_blank">
+							<img src="resource/images/icon_fb.png" alt="Icon of facebook shortcut">
+						</a>
+					</div>
+					<div class="headNameArea">
+						<h1>Geunwon Mo</h1>
+						<p>Financial platform back-end software engineer</p>
+					</div>
 				</div>
-				<div class="headNameArea">
-					<h1>Geunwon Mo</h1>
-					<p>Financial platform back-end software engineer</p>
+				<div id="headerNavArea" class="colorSchemeLife">
+					<!-- Navigation bar -->
+					<div class="fL nobr">
+						<a href="index.html">About</a>
+						<span>|</span>
+						<a href="work.html">Work</a>
+						<span>|</span>
+						<a href="life.html" class="selected">Life</a>
+					</div>
+					<div class="fR" id="searchForm">
+						<label for="searchText">Search:</label>
+						<input type="text" placeholder="Text to search" id="searchText" name="searchText" maxlength="50" required>
+						<input type="submit" id="searchBtn" value="GO!">
+					</div>
 				</div>
-			</header>
-			<nav class="colorSchemeLife">
-				<!-- Navigation bar -->
-				<div class="fL nobr">
-					<a href="index.html">About</a>
-					<span>|</span>
-					<a href="work.html">Work</a>
-					<span>|</span>
-					<a href="life.html" class="selected">Life</a>
-				</div>
-				<div class="fR" id="searchForm">
-					<label for="searchText">Search:</label>
-					<input type="text" placeholder="Text to search" id="searchText" name="searchText" maxlength="50" required>
-					<input type="submit" id="searchBtn" value="GO!">
-				</div>
-			</nav>
+			</div>
 			<main>
 				<!-- [Start] main area-->
 				<div id="galleryGridContainer">

@@ -44,7 +44,7 @@ galleryItems.forEach(element => {
 
       //change size
       element.classList.remove('galleryItem');
-      element.classList.add('fullSizeImage');      
+      element.classList.add('fullSizeImage');
       
       modal.appendChild(element);
     }
@@ -63,6 +63,8 @@ galleryItems.forEach(element => {
         originElement.classList.add('galleryItem');
 
         lastClickedNodesParent.removeChild(lastClickedNodesParent.querySelector('img'));  //remove now playing image
+        element.pause();  //video stop
+        element.currentTime = 0;  //video time set to first
         lastClickedNodesParent.appendChild(modal.firstChild);
       }
 
