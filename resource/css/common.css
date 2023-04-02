@@ -4,7 +4,7 @@
 #gridContainer{
 	display:grid;
 	grid-template-columns: minmax(480px, auto);	/* shrink min to 500px, width is autosizing*/
-	grid-template-rows: 180px auto 100px;
+	grid-template-rows: 180px auto 70px;
 	grid-template-areas: 
 		"header"
 		"main"
@@ -39,8 +39,10 @@
 .colorSchemeWork3 { background-color: #731702; }
 .lightColorSchemeWork3 { background-color:  #F27405; }
 
-
-
+/* reduce browser's default margin */
+body {
+    margin: 0px;
+}
 
 #topHeaderMenus{
     grid-area: header;
@@ -113,6 +115,10 @@
 
 }
 
+address > a {
+    color:white;
+}
+
 @media only screen and (max-width: 840px) {	/* hide searchForm when screen width less than given px */
     #searchForm {
         display: none;
@@ -135,20 +141,22 @@
     background-color: #ffffffaa;
     border: 0px solid black;
     border-radius: 15px;
-
 }
 
 main {
 	grid-area: main;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     max-width: 1000px;
 }
 
 footer {
 	grid-area: footer;
+    width: 100%;
+    color: white;
     text-align: center;
-	padding: 10px 0px;
+	padding: 12px 0px;
 }
 
 .center { text-align: center; }
@@ -171,19 +179,27 @@ footer {
 
 
 /* for index.html */
+#heroImgContainer{
+    position:relative;
+    /* margin-bottom: -50px; */
+}
+
 .topBgArea > img {
     width: 100%;
-    margin-bottom: -50px;
 }
 
 .profileImgArea{
-    position:relative;
-    top:-110px;
-    z-index:2;
-    padding-left: 30px;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    margin-top: -100px;
+    margin-left: 22px;
 }
 .profileImgArea > img {
-    width:180px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 }
 
 .iconImg{
@@ -196,15 +212,18 @@ footer {
 .articleArea{
     /* max-width:800px;  */
     position:relative;
-    top:-150px; 
     background-color:#FFF; 
     margin:0px 0; 
-    padding:30px 20px;
+    padding:0px 20px 20px;
     text-align:left;
 }
 
 .articleArea > article {
     padding: 0 20px;
+}
+
+.articleArea > article > h2{
+    margin-top: 0px;
 }
 
 .articleArea > article > table{
@@ -229,7 +248,7 @@ footer {
 }
 
 .indexMain {
-    margin-bottom: -150px;  /* adjust due to floated profile image height */
+    /* margin-bottom: -150px;  adjust due to floated profile image height */
 }
 
 .patents > li{ 
