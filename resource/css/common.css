@@ -17,12 +17,30 @@
 }
 
 /* color scheme */
-.colorSchemeIndex { background-color: #0085FF; }
-.lightColorSchemeIndex { background-color: rgb(178, 218, 255); }
-.colorSchemeLife { background-color: #FF007A; }
-.lightColorSchemeLife { background-color: rgb(255, 178, 215); }
-.colorSchemeWork { background-color: #FFB800; }
-.lightColorSchemeWork { background-color:  rgb(255, 234, 178); }
+/* [11]Adobe. Adobe Color. Adobe.com. Retrieved from https://color.adobe.com/ko/explore */
+.colorSchemeIndex1 { background-color: #0085FF; }
+.lightColorSchemeIndex1 { background-color: rgb(178, 218, 255); }
+.colorSchemeIndex2 { background-color: #44803F; }
+.lightColorSchemeIndex2 { background-color: #B4CF66; }
+.colorSchemeIndex3 { background-color: #FF5A33; }
+.lightColorSchemeIndex3 { background-color: #FFEC5C; }
+
+.colorSchemeLife1 { background-color: #FF007A; }
+.lightColorSchemeLife1 { background-color: rgb(255, 178, 215); }
+.colorSchemeLife2 { background-color: #020F59 }
+.lightColorSchemeLife2 { background-color: #F20587 }
+.colorSchemeLife3 { background-color: #273640; }
+.lightColorSchemeLife3 { background-color: #7C92A6; }
+
+.colorSchemeWork1 { background-color: #FFB800; }
+.lightColorSchemeWork1 { background-color:  rgb(255, 234, 178); }
+.colorSchemeWork2 { background-color: #014040; }
+.lightColorSchemeWork2 { background-color:  #03A678; }
+.colorSchemeWork3 { background-color: #731702; }
+.lightColorSchemeWork3 { background-color:  #F27405; }
+
+
+
 
 #topHeaderMenus{
     grid-area: header;
@@ -76,7 +94,7 @@
     padding: 10px 50px;
 }
 #headerNavArea span{
-    padding:0 50px;
+    padding:0 20px;
 }
 #headerNavArea a{
     text-decoration: none;
@@ -88,8 +106,11 @@
 }
 #headerNavArea a.selected{
     text-decoration: underline;
-    color: black;
+    color: #000;
+    /*[10]Silvia O’Dwyer. 2021. How to Create Neon Text With CSS. CSS-Tricks. Retrieved from https://css-tricks.com/how-to-create-neon-text-with-css/*/
     font-weight: bolder;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
 }
 
 @media only screen and (max-width: 840px) {	/* hide searchForm when screen width less than given px */

@@ -82,3 +82,6 @@
 
 [9]Søren D. Ptæus. 2018. JavaScript scrollIntoView smooth scroll and offset. Stack Overflow. Retrieved April 2, 2023 from https://stackoverflow.com/a/49860927
 ‌
+[10]Silvia O’Dwyer. 2021. How to Create Neon Text With CSS. CSS-Tricks. Retrieved from https://css-tricks.com/how-to-create-neon-text-with-css/
+
+[11]Adobe. Adobe Color. Adobe.com. Retrieved from https://color.adobe.com/ko/explore
