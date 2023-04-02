@@ -35,7 +35,7 @@ function changeColor(colour, clickedElement){
   footer.classList.add(colorScheme);
   
   //for index page's color lines
-  document.querySelectorAll('.articleArea > article > table tr:first-child > td:first-child').forEach(
+  document.querySelectorAll('#skills tr:first-child > td:first-child').forEach(
       element => {
         element.style.backgroundColor = window.getComputedStyle(headerNav).backgroundColor;
       }

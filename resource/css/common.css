@@ -185,6 +185,12 @@ main {
     max-width: 1000px;
 }
 
+@media screen and (min-width: 1000px) {	/* desktop view*/
+    main {
+        max-width: 1300px;
+    }
+}
+
 footer {
 	grid-area: footer;
     width: 100%;
@@ -252,37 +258,63 @@ footer {
     text-align:left;
 }
 
-.articleArea > article {
+.articleArea article{
+    display: grid;
+    grid-template-areas: 
+        "bio"
+        "skills"
+        "patents";
+}
+
+@media screen and (min-width: 1000px) {	/* desktop view*/
+    .articleArea article{
+        display: grid;
+        grid-template-areas: 
+            "bio bio"
+            "skills patents"
+            ;
+        gap: 20px;
+    }
+} 
+
+
+#bio {
+    grid-area: bio;
     padding: 0 20px;
 }
 
-.articleArea > article > h2{
+#bio > h2{
     margin-top: 0px;
 }
 
-.articleArea > article > table{
+#skills{
+    grid-area: skills;
+}
+
+#skills table{
     width: 100%;
     text-align:right;
 }
-.articleArea > article > table caption{
+
+#skills caption{
     text-align: left;
     font-weight: bold;
 }
 /* skill progress bar */
-.articleArea > article > table tr:first-child > td:first-child{
+#skills tr:first-child > td:first-child{
     background-color: #0085FF;
     height: 7px;
 }
 /* skill progress bar background */
-.articleArea > article > table tr:first-child > td{
+#skills tr:first-child > td{
     background-color: #d9d9d9;
 }
-.articleArea > article > table td{
+#skills td{
     font-size: 11px;
 }
 
-.indexMain {
-    /* margin-bottom: -150px;  adjust due to floated profile image height */
+#patents{
+    grid-area: patents;
 }
 
 .patents > li{ 
@@ -293,7 +325,7 @@ footer {
     list-style-type: square;
 }
 
-.articleArea > article > ul, .patents ul{
+#bio > ul, .patents ul{
     font-size: 13px;
     line-height: 20px;
     font-style: italic;
