@@ -3,7 +3,7 @@
 
 #gridContainer{
 	display:grid;
-	grid-template-columns: minmax(480px, auto);	/* shrink min to 500px, width is autosizing*/
+	grid-template-columns: auto;	/* shrink min to 500px, width is autosizing*/
 	grid-template-rows: 180px auto 70px;
 	grid-template-areas: 
 		"header"
@@ -73,21 +73,32 @@ body {
 
 .headNameArea{
     padding:0 0 5px 50px;
+    cursor: pointer;
+}
+
+#headerNavArea{
+    width: 100%;
+    height: 50px;
 }
 
 @media screen and (max-width: 600px) {	/* mobile view */
     #gridContainer{
-        grid-template-rows: 110px auto 70px;
+        grid-template-rows: 105px auto 70px;
     }
     #headerNameArea h1 {
         font-size:22px;
         padding-top:5px;
     }
     #headerNameArea p {
-        font-size:13px;
+        font-size:11px;
+    }
+    #headerNavArea{
+        width: 100%;
+        height: 45px;
     }
     #headerNavArea div{
         padding: 10px 30px;
+        font-size: 17px;
     }
     .headNameArea{
         padding:0 0 5px 30px;
@@ -122,11 +133,6 @@ body {
     width: 25px;
     height: 25px;
     padding: 1px;
-}
-
-#headerNavArea{
-    width: 100%;
-    height: 50px;
 }
 
 #headerNavArea span{
@@ -370,6 +376,14 @@ footer {
     margin-right:20px;
     float: left;
 }
+@media screen and (max-width: 600px) { /* mobile */
+    #profileImage{
+        width: 100px;
+        margin: 40px 10px;
+        float:left;
+
+    }
+}
 
 #galleryArea{
     grid-area: gallery;
@@ -384,12 +398,48 @@ footer {
     width: 260px;
 }
 
+
+@media screen and (max-width: 600px) {	/* mobile view */
+    #galleryArea{
+        gap: 0px;
+    }
+    .galleryItem {
+        width: 190px;
+    }
+    #audio{
+        width: 100%;
+        text-align: center;
+    }
+} 
+
+
+
 /* for work.html */
+#personalHistoryTableMobile{
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {	/* mobile view */
+    #personalHistoryTableMobile{
+        display: block;
+    }
+    #personalHistoryTable{
+        display: none;
+    }
+}
+
+
 .trColor{
 	background-color: #efefef;
 }
 .trOddColor{
 	background-color: #d9d9d9;
+}
+
+#workDuration{
+    margin-left:10px;
+    font-size:13px;
 }
 
 #personalHistoryTable{

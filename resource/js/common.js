@@ -3,6 +3,12 @@
 * @author: Geunwon Mo (B00954162)
 */
 
+const headNameArea = document.querySelector('.headNameArea');
+headNameArea.addEventListener('click', (event) => {
+  document.location = 'index.html';
+})
+
+
 const colour1 = document.getElementById('colour1');
 const colour2 = document.getElementById('colour2');
 const colour3 = document.getElementById('colour3');
