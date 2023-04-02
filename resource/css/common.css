@@ -419,6 +419,10 @@ footer {
     display: none;
 }
 
+#personalHistoryTableMobile b{
+    font-weight: bolder;
+}
+
 
 @media screen and (max-width: 600px) {	/* mobile view */
     #personalHistoryTableMobile{
@@ -429,6 +433,9 @@ footer {
     }
 }
 
+.spacer{
+    height: 30px;
+}
 
 .trColor{
 	background-color: #efefef;
