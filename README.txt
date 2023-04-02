@@ -80,8 +80,8 @@
 
 @ References
 
-[1] Poorna Chandra Ghanta. N.D. Social media Icons bundle Facebook Instagram Snapchat LinkedIn and other logo buttons. from https://www.vecteezy.com/vector-art/2661796-social-media-icons-bundle-facebook-instagram-snapchat-linkedin-and-other-logo-buttons
-
+[1]Download Social media Icons bundle Facebook Instagram Snapchat LinkedIn and other logo buttons. Vecteezy. Retrieved April 1, 2023 from https://www.vecteezy.com/vector-art/2661796-social-media-icons-bundle-facebook-instagram-snapchat-linkedin-and-other-logo-buttons
+‌
 [2] FreeGroove. 2022. Seduction Jazz. from https://pixabay.com/music/search/genre/smooth%20jazz/
 
 [3] Ministry of Employment and Labor in Korea. 2019. I asked Kakao Bank employees! "What does work-life balance mean to you?" (17 June 2019). from https://www.youtube.com/watch?v=iwisWKgjUcs
@@ -91,3 +91,7 @@
 [5] Maciej Duszyński. 2023. Resume Header: Examples & Templates for Great Headings. Retrieved from https://resumelab.com/resume/header
 
 [6] Dailymotion support. N.D. How to preserve the player aspect ratio on a responsive page. Retrieved from https://faq.dailymotion.com/hc/en-us/articles/360022841393-How-to-preserve-the-player-aspect-ratio-on-a-responsive-page#:~:text=In%20the%20HTML%2C%20put%20the,56.25%25%20%3D%2016%3A9
+
+[7]coolaj86. 2011. Escape string for use in Javascript regex. Stack Overflow. Retrieved April 1, 2023 from https://stackoverflow.com/a/6969486
+
+[8]Amin Jafari. 2017. javascript - Need help changing appendChild to replaceChild. Stack Overflow. Retrieved April 1, 2023 from https://stackoverflow.com/a/45787231

@@ -309,4 +309,31 @@ footer {
 	border: none;
 }
 
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* for photo gallery*/
+.backgroundBlocker {
+    /* to center image*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    z-index: 9999;
+}
+  
+.fullSizeImage {
+    max-width: 95%;
+    max-height: 95%;
+}
+
 /* END of css file */
