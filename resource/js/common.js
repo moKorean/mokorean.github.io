@@ -3,20 +3,24 @@
 * @author: Geunwon Mo (B00954162)
 */
 
+//Event Handler
 const headNameArea = document.querySelector('.headNameArea');
 headNameArea.addEventListener('click', (event) => {
   document.location = 'index.html';
 })
 
-
 const colour1 = document.getElementById('colour1');
 const colour2 = document.getElementById('colour2');
 const colour3 = document.getElementById('colour3');
 
+//Event Handler
 colour1.addEventListener("click",  (event) => {event.preventDefault(); changeColor(1, colour1)});  //prevent executing <a> tag's default action
 colour2.addEventListener("click",  (event) => {event.preventDefault(); changeColor(2, colour2)});
 colour3.addEventListener("click",  (event) => {event.preventDefault(); changeColor(3, colour3)});
 
+/*
+* ColourChanger
+*/
 function changeColor(colour, clickedElement){
 
   const headerName = document.getElementById('headerNameArea');
@@ -28,7 +32,9 @@ function changeColor(colour, clickedElement){
   let colorScheme = "colorScheme" + clickedElement.getAttribute('kind') + colour;
 
   //selector's selection mark move
-  document.querySelectorAll('[id^="colour"]').forEach(existColorSelectors => { existColorSelectors.classList.remove('selected'); });
+  document.querySelectorAll('[id^="colour"]').forEach(existColorSelectors => {
+    existColorSelectors.classList.remove('selected'); 
+  });
   clickedElement.classList.add('selected');
 
   //change color
@@ -48,16 +54,3 @@ function changeColor(colour, clickedElement){
   );
 
 }
-
-//for splash image, reduce body window when just index.html
-document.querySelectorAll('.indexMain').forEach( el => {
-  //if indexMain class detected, it is index.html
-  console.log('index html!');
-  el.style.height = el.style.height - 200;
-  var body = document.body,
-    html = document.documentElement;
-
-  var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-});

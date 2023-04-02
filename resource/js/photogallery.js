@@ -11,7 +11,7 @@ let isModal = false;  //modal is opened
 
 galleryItems.forEach(element => {
 
-  if (element.parentNode.tagName == 'A'){
+  if (element.parentNode.tagName == 'A'){ //Conditional
     //if parent node is <a>. remove default event //do not use href="big image"
     element.parentNode.addEventListener('click', (event) => {
       event.preventDefault();

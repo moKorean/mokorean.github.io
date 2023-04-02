@@ -19,7 +19,7 @@ function searchInPage() {
     let cnt = 0;    //found count
 
     if (text == ''){    //empty validation
-        alert('The input is empty. Please enter some text.');
+        alert('The input is empty. Please enter some text.');   //Notifications
         searchText.focus();
         return;
     }

@@ -7,6 +7,41 @@
 @ Descriptions
 - Assignment 3 is improved assignment 2 using CSS, JS
 
+@ Documentation
+- This assignment also hosted at [https://mokorean.github.io]
+- This assignment is responsive design webpage using media quries and grid.
+    - Mobile screen width is considered 600px.
+        - Work page will show different design of table on mobile sized browser.
+    - Tablet screen width is considered 1000px.
+    - Desktop screen width is considered more than 1000px.
+        - About page will re-organized section on desktop sized browser.
+    - The photogallery will show different grid items on different sized browser. used flex.
+- The colour changer is located in navigation bar with 3 dots.    
+- common.js
+    - This js file will add 'go to home' link to the top name area.
+    - This js file will add 'ColourChanger' to 3 dots in the navigation bar.
+        - changeColor function will change 3 different colour schemes to the web page.
+- photogallery.js
+    - This js file will add a gallery function to the life.html page.
+    - the old gallery worked as opening a big picture in a new window, but the new gallery using js will open big images into the same window like a modal popup.
+    - The photogallery has 2 type of element, video and picture. this JS will handle both types.
+- search.js
+    - This js file will add a search text in current page function to search form.
+    - Usually, search widgets search the whole website using server-side languages. However, as we have not learned about them yet, I will make it work on the page locally.
+    - Limitation: find text in innerHTML, so tag itself's content might be found, if try to find tagname, it will occur bug., e.g. div
+    - Search text and highlight them with yellow background and scroll to the first searched text.
+
+@ Assets 
+- Images
+    - Favicon, Facebook, LinkedIn, and Instagram icons for shortcuts
+    - Background Images, Profile images
+    - Photos of me will be included.
+- Videos
+    - Youtube videos
+    - Videos of me will be included
+- Audios
+    - Some license free MP3 files from the internet
+
 @ File structure (using tree : https://cli-ck.io/tree-directory-visualisation/)
 .
 ├── CSCI1170-A3-CodeReview.pdf
