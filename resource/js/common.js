@@ -20,6 +20,13 @@ colour3.addEventListener("click",  (event) => {event.preventDefault(); changeCol
 
 let darkmodeClass = null; //to store this page's darkmode color class
 
+//if queryString 'colour' setted
+let pageSettedColor = getParameterByName('colour');
+if (pageSettedColor == 1 || pageSettedColor == 2 || pageSettedColor == 3) changeColorBySet(parseInt(pageSettedColor));
+function changeColorBySet(colorValue){
+  changeColor(colorValue, document.getElementById('colour'+colorValue));
+}
+
 /*
 * ColourChanger
 */
@@ -96,4 +103,22 @@ function changeColor(colour, clickedElement){
       }
   );
 
+  //add query strings for nav Items
+  document.querySelectorAll('.navI').forEach(item => {
+    let url = new URL(item.href); //make new url obj
+    url.searchParams.set('colour', colour); //set query string
+    item.href = url.href; //replace url with query string
+  });
+
+}
+
+//to get queryString by javascript
+//https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+function getParameterByName(name, url = window.location.href) {
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
