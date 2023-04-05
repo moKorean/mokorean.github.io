@@ -19,29 +19,33 @@
 /* color scheme */
 /* [11]Adobe. Adobe Color. Adobe.com. Retrieved from https://color.adobe.com/ko/explore */
 .colorSchemeIndex1 { background-color: #0085FF; }
-.lightColorSchemeIndex1 { background-color: rgb(178, 218, 255); }
+.lightColorSchemeIndex1 { background-color: #B2DAFF; }
 .colorSchemeIndex2 { background-color: #44803F; }
 .lightColorSchemeIndex2 { background-color: #B4CF66; }
-.colorSchemeIndex3 { background-color: #FF5A33; }
-.lightColorSchemeIndex3 { background-color: #FFEC5C; }
+.colorSchemeIndex3 { background-color: #F20587; }
+.lightColorSchemeIndex3 { background-color: #020F59; }
 
 .colorSchemeLife1 { background-color: #FF007A; }
-.lightColorSchemeLife1 { background-color: rgb(255, 178, 215); }
-.colorSchemeLife2 { background-color: #020F59 }
-.lightColorSchemeLife2 { background-color: #F20587 }
-.colorSchemeLife3 { background-color: #273640; }
-.lightColorSchemeLife3 { background-color: #7C92A6; }
+.lightColorSchemeLife1 { background-color: #FFB2D7; }
+.colorSchemeLife2 { background-color: #45C4B0; }
+.lightColorSchemeLife2 { background-color: #DAFDBA }
+.colorSchemeLife3 { background-color: #7C92A6; }
+.lightColorSchemeLife3 { background-color: #273640; }
 
 .colorSchemeWork1 { background-color: #FFB800; }
-.lightColorSchemeWork1 { background-color:  rgb(255, 234, 178); }
+.lightColorSchemeWork1 { background-color:  #FFEAB2; }
 .colorSchemeWork2 { background-color: #014040; }
 .lightColorSchemeWork2 { background-color:  #03A678; }
-.colorSchemeWork3 { background-color: #731702; }
-.lightColorSchemeWork3 { background-color:  #F27405; }
+.colorSchemeWork3 { background-color: #F27405; }
+.lightColorSchemeWork3 { background-color:  #731702; }
 
 /* reduce browser's default margin */
 body {
     margin: 0px;
+}
+
+body.darkMode {
+    color: white;
 }
 
 #topHeaderMenus{
@@ -258,10 +262,11 @@ footer {
 .articleArea{
     /* max-width:800px;  */
     position:relative;
-    background-color:#FFF; 
     margin:0px 0; 
     padding:0px 20px 20px;
     text-align:left;
+
+    /* background-color:#FFF;  */
 }
 
 .articleArea article{
@@ -337,19 +342,29 @@ footer {
     font-style: italic;
 }
 
-.contactBar a{
+#contactBar a{
     color:rgb(0, 112, 147);
     text-decoration: none;
 }
-.contactBar a:hover{
+#contactBar a:hover{
     color:black;
     text-decoration: underline;
 }
-.contactBar + p{	/* next paragraph of contact bar*/
+
+#contactBar.darkMode a{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+#contactBar.darkMode a:hover{
+    color:#FFFFFF;
+    text-decoration: underline;
+}
+
+#contactBar + p{	/* next paragraph of contact bar*/
     border-left: 3px solid darkslategrey;
     padding-left: 10px;
 }
-.contactBar + p::first-letter{	/* next paragraph of contact bar*/
+#contactBar + p::first-letter{	/* next paragraph of contact bar*/
     font-size:1.4em;
 }
 

@@ -18,6 +18,8 @@ colour1.addEventListener("click",  (event) => {event.preventDefault(); changeCol
 colour2.addEventListener("click",  (event) => {event.preventDefault(); changeColor(2, colour2)});
 colour3.addEventListener("click",  (event) => {event.preventDefault(); changeColor(3, colour3)});
 
+let darkmodeClass = null; //to store this page's darkmode color class
+
 /*
 * ColourChanger
 */
@@ -26,6 +28,39 @@ function changeColor(colour, clickedElement){
   const headerName = document.getElementById('headerNameArea');
   const headerNav = document.getElementById('headerNavArea');
   const footer = document.querySelector('footer');
+  
+  //elements selector query for darkmode
+  const darkElementQuery = 'body, #headerNameArea > h1, #headerNameArea > p, #contactBar';
+
+  let darkmode = (toDark, backgroundColorClass) => {
+      console.log(`to dark mode? ${toDark}`);
+      if (toDark){
+
+        darkmodeClass = backgroundColorClass;
+        //convert to dark mode
+        document.querySelectorAll('.topShortcuts img').forEach(icon => {
+          icon.src = icon.src.replace('.png', '_dark.png');
+        });
+
+        document.querySelectorAll(darkElementQuery).forEach(el => {
+          el.classList.add(darkmodeClass);
+          el.classList.add('darkMode');
+        });
+
+      } else {
+        //convert to normal mode
+        document.querySelectorAll('.topShortcuts img').forEach(icon => {
+          icon.src = icon.src.replace('_dark.png', '.png');
+        });
+
+        document.querySelectorAll(darkElementQuery).forEach(el => {
+          el.classList.remove(darkmodeClass);
+          el.classList.remove('darkMode');
+        });
+      }
+
+
+  }
   
   //defines new color
   let lightColorScheme = "lightColorScheme" + clickedElement.getAttribute('kind') + colour;
@@ -45,6 +80,14 @@ function changeColor(colour, clickedElement){
   headerName.classList.add(lightColorScheme);
   headerNav.classList.add(colorScheme);
   footer.classList.add(colorScheme);
+
+  //darkmode
+  if (colour === 3){
+    darkmode(true, lightColorScheme);
+  } else {
+    //normal mode
+    darkmode(false, lightColorScheme);
+  }
   
   //for index page's color lines
   document.querySelectorAll('#skills tr:first-child > td:first-child').forEach(
