@@ -120,3 +120,5 @@
 [10]Silvia O’Dwyer. 2021. How to Create Neon Text With CSS. CSS-Tricks. Retrieved from https://css-tricks.com/how-to-create-neon-text-with-css/
 
 [11]Adobe. Adobe Color. Adobe.com. Retrieved from https://color.adobe.com/ko/explore
+
+[12]How can I get query string values in JavaScript? Stack Overflow. Retrieved from https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
