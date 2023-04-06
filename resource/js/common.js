@@ -46,7 +46,11 @@ function changeColor(colour, clickedElement){
         darkmodeClass = backgroundColorClass;
         //convert to dark mode
         document.querySelectorAll('.topShortcuts img').forEach(icon => {
-          icon.src = icon.src.replace('.png', '_dark.png');
+          let newSrc = icon.src;
+          if (newSrc.indexOf('_dark.png') < 0){
+            newSrc = newSrc.replace('.png', '_dark.png');
+          }
+          icon.src = newSrc;
         });
 
         document.querySelectorAll(darkElementQuery).forEach(el => {
@@ -65,8 +69,6 @@ function changeColor(colour, clickedElement){
           el.classList.remove('darkMode');
         });
       }
-
-
   }
   
   //defines new color
@@ -103,6 +105,26 @@ function changeColor(colour, clickedElement){
       }
   );
 
+  //for work page's table
+  document.querySelectorAll('[class^="tableColor"]').forEach(
+    element => {
+      
+      const classes = element.classList;
+      //remove old color
+      for (let z = 1; z <= 2; z++){
+        for (let i = 0; i < classes.length; i++) {
+          if (classes[i].startsWith('tableColor'+z)) {
+            element.classList.remove(classes[i]);
+            element.classList.add('tableColor'+z+'_'+colour);
+          }
+        }
+      }
+      
+    }
+);
+
+  
+
   //add query strings for nav Items
   document.querySelectorAll('.navI').forEach(item => {
     let url = new URL(item.href); //make new url obj
@@ -113,7 +135,7 @@ function changeColor(colour, clickedElement){
 }
 
 //to get queryString by javascript
-//https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+//[12]How can I get query string values in JavaScript? Stack Overflow. Retrieved from https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 function getParameterByName(name, url = window.location.href) {
   name = name.replace(/[\[\]]/g, '\\$&');
   var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),

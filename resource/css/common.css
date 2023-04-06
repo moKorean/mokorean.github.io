@@ -31,13 +31,23 @@
 .lightColorSchemeLife2 { background-color: #DAFDBA }
 .colorSchemeLife3 { background-color: #7C92A6; }
 .lightColorSchemeLife3 { background-color: #273640; }
-
 .colorSchemeWork1 { background-color: #FFB800; }
 .lightColorSchemeWork1 { background-color:  #FFEAB2; }
 .colorSchemeWork2 { background-color: #014040; }
 .lightColorSchemeWork2 { background-color:  #03A678; }
 .colorSchemeWork3 { background-color: #F27405; }
 .lightColorSchemeWork3 { background-color:  #731702; }
+
+.tableColor1 {background-color:  #EFEFEF;}
+.tableColor2 {background-color:  #D9D9D9;}
+
+.tableColor1_1{background-color:  #FFFAED;}
+.tableColor2_1{background-color:  #FFEAB2;}
+.tableColor1_2{background-color:  #eaffd6;}
+.tableColor2_2{background-color:  #DAFDBA;}
+.tableColor1_3{background-color:  #310900;}
+.tableColor2_3{background-color:  #480d00;}
+
 
 /* reduce browser's default margin */
 body {
@@ -452,13 +462,6 @@ footer {
     height: 30px;
 }
 
-.trColor{
-	background-color: #efefef;
-}
-.trOddColor{
-	background-color: #d9d9d9;
-}
-
 .workDuration{
     margin-left:10px;
     font-size:13px;
@@ -472,8 +475,8 @@ footer {
 	padding: 7px;
 }
 
-#personalHistoryTable tr:first-child ~ tr{	/* first child of tr id first line (head) , so select siblings are table body. */
-    color: #2f2f2f;
+#personalHistoryTable th{
+    font-weight: bolder;
 }
 
 #personalHistoryTable ul{
