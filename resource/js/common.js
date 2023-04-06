@@ -23,6 +23,7 @@ let darkmodeClass = null; //to store this page's darkmode color class
 //if queryString 'colour' setted
 let pageSettedColor = getParameterByName('colour');
 if (pageSettedColor == 1 || pageSettedColor == 2 || pageSettedColor == 3) changeColorBySet(parseInt(pageSettedColor));
+else changeColorBySet(1); //default colour = 1
 function changeColorBySet(colorValue){
   changeColor(colorValue, document.getElementById('colour'+colorValue));
 }
