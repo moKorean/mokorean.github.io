@@ -524,4 +524,17 @@ footer {
     max-height: 95%;
 }
 
+#emailLabel{
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+textarea#mailContent{
+    
+}
+
+.emailBtn{
+    font-size: 15px;
+}
+
 /* END of css file */

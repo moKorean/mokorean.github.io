@@ -1,6 +1,7 @@
 /**
 * CSCI 1170 - Winter23
 * @author: Geunwon Mo (B00954162)
+* This JS will handle colour changer, and send Mail at footer.
 */
 
 //Event Handler
@@ -101,15 +102,14 @@ function changeColor(colour, clickedElement){
   
   //for index page's color lines
   document.querySelectorAll('#skills tr:first-child > td:first-child').forEach(
-      element => {
-        element.style.backgroundColor = window.getComputedStyle(headerNav).backgroundColor;
-      }
+    element => {
+      element.style.backgroundColor = window.getComputedStyle(headerNav).backgroundColor;
+    }
   );
 
   //for work page's table
   document.querySelectorAll('[class^="tableColor"]').forEach(
     element => {
-      
       const classes = element.classList;
       //remove old color
       for (let z = 1; z <= 2; z++){
@@ -119,12 +119,9 @@ function changeColor(colour, clickedElement){
             element.classList.add('tableColor'+z+'_'+colour);
           }
         }
-      }
-      
+      } 
     }
-);
-
-  
+  );
 
   //add query strings for nav Items
   document.querySelectorAll('.navI').forEach(item => {
@@ -144,4 +141,57 @@ function getParameterByName(name, url = window.location.href) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+let isModalEmail = false;  //modal is opened
+
+//change mailto: to textarea
+document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
+  
+  let mailto = el.href;
+  mailto = mailto.substring(mailto.indexOf(':')+1);
+  console.log(mailto);
+
+  el.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const modal = document.createElement('div');
+    modal.classList.add('backgroundBlocker');
+
+    let textareaDiv = document.createElement('div');
+    textareaDiv.style.zIndex = 9999999;
+      
+    textareaDiv.innerHTML = `<label for="mailContent" id="emailLabel">Email Content :</label><br/>
+      <textarea class="emailTo" rows="12" cols="55" id="mailContent"></textarea><br/>
+      <button class="emailBtn" onclick="sendEmail('${mailto}')">Send Email to ${mailto}</button>
+      <button class="emailBtn" onclick="closeEmail()">Close</button>`;
+      
+    modal.appendChild(textareaDiv);
+
+    document.body.appendChild(modal);
+    isModalEmail = true;
+
+    const mailContent = document.getElementById("mailContent");
+    mailContent.focus();
+  })
+
+});
+
+function sendEmail(mailTo) {
+  const mailContent = document.getElementById("mailContent");
+  if (mailContent.value.trim() == ''){
+    alert('The input is empty. Please enter some text.');   //Notifications
+    mailContent.focus();
+    return;
+  }
+  const emailUrl = `mailto:${mailTo}?subject=${"Contact from the visitor"}&body=${encodeURIComponent(mailContent.value)}`;
+  window.open(emailUrl);
+  closeEmail();
+
+}
+
+function closeEmail(){
+  if (!isModalEmail) return;
+  document.body.removeChild(document.querySelector('.backgroundBlocker'));
+  isModalEmail = false;
 }

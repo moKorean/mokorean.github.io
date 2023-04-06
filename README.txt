@@ -20,7 +20,8 @@
 - common.js
     - This js file will add 'go to home' link to the top name area.
     - This js file will add 'ColourChanger' to 3 dots in the navigation bar.
-        - changeColor function will change 3 different colour schemes to the web page.
+        - changeColor function will change 3 different colour schemes including darkmode to the web page.
+    - common.js also handle email links (<a href="mailto:">) convert to textarea.
 - photogallery.js
     - This js file will add a gallery function to the life.html page.
     - the old gallery worked as opening a big picture in a new window, but the new gallery using js will open big images into the same window like a modal popup.
