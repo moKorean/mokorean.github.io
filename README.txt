@@ -44,7 +44,8 @@
 
 @ File structure (using tree : https://cli-ck.io/tree-directory-visualisation/)
 .
-├── CSCI1170-A3-CodeReview.pdf
+├── CodeReview.pdf
+├── Design3Devices.pdf
 └── Web
     ├── README.txt
     ├── index.html
@@ -83,8 +84,11 @@
     │   ├── images
     │   │   ├── favicon.ico
     │   │   ├── icon_fb.png
+    │   │   ├── icon_fb_dark.png
     │   │   ├── icon_insta.png
+    │   │   ├── icon_insta_dark.png
     │   │   ├── icon_linkedin.png
+    │   │   ├── icon_linkedin_dark.png
     │   │   ├── nowplaying.png
     │   │   ├── profile_circle.png
     │   │   └── top_bg.jpg
@@ -94,7 +98,7 @@
     │       └── search.js
     └── work.html
 
-11 directories, 39 files
+11 directories, 43 files
 
 
 @ References
