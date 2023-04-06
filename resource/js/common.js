@@ -103,7 +103,9 @@ function changeColor(colour, clickedElement){
   //for index page's color lines
   document.querySelectorAll('#skills tr:first-child > td:first-child').forEach(
     element => {
-      element.style.backgroundColor = window.getComputedStyle(headerNav).backgroundColor;
+      setTimeout(function() { //window.getComuted need little time to draw the browser.
+        element.style.backgroundColor = window.getComputedStyle(document.querySelector('div#headerNavArea')).backgroundColor;
+      }, 10);
     }
   );
 
