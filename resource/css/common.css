@@ -525,16 +525,33 @@ footer {
 }
 
 #emailLabel{
+    font-size: 18px;
     font-weight: bolder;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 textarea#mailContent{
-    
+    font-size: 13px;
 }
 
 .emailBtn{
+    color:black;
+    background-color: #FFFFFF;
     font-size: 15px;
+    border-radius: 15px;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0px 10px;
+    
+    border-style: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.emailCloseBtn{
+    color:white;
+    background-color: #EA4C89;
 }
 
 /* END of css file */

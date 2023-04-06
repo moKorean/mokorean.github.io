@@ -164,7 +164,7 @@ document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
     textareaDiv.innerHTML = `<label for="mailContent" id="emailLabel">Email Content :</label><br/>
       <textarea class="emailTo" rows="12" cols="55" id="mailContent"></textarea><br/>
       <button class="emailBtn" onclick="sendEmail('${mailto}')">Send Email to ${mailto}</button>
-      <button class="emailBtn" onclick="closeEmail()">Close</button>`;
+      <button class="emailBtn emailCloseBtn" onclick="closeEmail()">Close</button>`;
       
     modal.appendChild(textareaDiv);
 
